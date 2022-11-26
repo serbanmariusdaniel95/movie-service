@@ -8,5 +8,5 @@ springdoc:
     path: /swagger-ui-custom.html
 
 the-movie-database:
-  url: https://api.themoviedb.org/3
-  key:
+  url: http://localhost:9561
+  key: test
