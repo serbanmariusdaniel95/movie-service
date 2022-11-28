@@ -3,6 +3,7 @@ package com.typesoft.movie.service.service.impl;
 import com.typesoft.movie.service.feign.TheMovieDatabaseClient;
 import com.typesoft.movie.service.feign.model.TopRatedRecordings;
 import com.typesoft.movie.service.feign.model.TvShow;
+import com.typesoft.movie.service.service.TvShowService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

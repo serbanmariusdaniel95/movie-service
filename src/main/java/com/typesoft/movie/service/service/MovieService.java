@@ -1,10 +1,9 @@
-package com.typesoft.movie.service.service.impl;
+package com.typesoft.movie.service.service;
 
 import com.typesoft.movie.service.feign.TheMovieDatabaseClient;
 import com.typesoft.movie.service.feign.model.Movie;
 import com.typesoft.movie.service.feign.model.TopRatedRecordings;
 import com.typesoft.movie.service.model.Recording;
-import com.typesoft.movie.service.service.RecordingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class MovieService extends AbstractRecordingService<Movie> implements RecordingService {
+public class MovieService implements RecordingService<Movie> {
 
     private final TheMovieDatabaseClient<TopRatedRecordings<Movie>> movieDatabaseClient;
 

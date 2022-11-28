@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ExceptionController {
 
     @ExceptionHandler(FeignException.class)
-    public ResponseEntity<?> handleException(final FeignException exception) {
+    public ResponseEntity<String> handleException(final FeignException exception) {
         return ResponseEntity.status(500).body(exception.getMessage());
     }
 }

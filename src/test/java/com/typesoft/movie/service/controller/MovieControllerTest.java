@@ -1,5 +1,6 @@
 package com.typesoft.movie.service.controller;
 
+import com.typesoft.movie.service.feign.model.Movie;
 import com.typesoft.movie.service.service.RecordingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ class MovieControllerTest {
     private MovieController movieController;
 
     @Mock
-    private RecordingService recordingService;
+    private RecordingService<Movie> recordingService;
 
     @BeforeEach
     void init() {

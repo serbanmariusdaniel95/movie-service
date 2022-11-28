@@ -1,5 +1,6 @@
 package com.typesoft.movie.service.controller;
 
+import com.typesoft.movie.service.feign.model.Movie;
 import com.typesoft.movie.service.model.Recording;
 import com.typesoft.movie.service.service.RecordingService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,7 @@ import java.util.List;
 @RequestMapping("/movie")
 public class MovieController {
 
-    private final RecordingService movieService;
+    private final RecordingService<Movie> movieService;
 
     @GetMapping("/top/{number}")
     public ResponseEntity<List<Recording>> getTopRatedMovies(@PathVariable("number") Integer number) {

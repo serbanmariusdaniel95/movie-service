@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 @AutoConfigureMockMvc
 @ContextConfiguration(classes = WireMockConfig.class)
-public class MovieServiceIT {
+class MovieServiceIT {
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 

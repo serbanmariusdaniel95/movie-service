@@ -19,7 +19,7 @@ class ExceptionControllerTest {
     private final ExceptionController exceptionController = new ExceptionController();
 
     @Test
-    public void should_return_500_error_when_feign_exception_is_thrown() {
+    void should_return_500_error_when_feign_exception_is_thrown() {
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,
                 exceptionController.handleException(FeignException.errorStatus("", getResponse())).getStatusCode());
     }
